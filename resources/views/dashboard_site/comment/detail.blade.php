@@ -26,27 +26,43 @@
                     <p class="first-color mr-2" style="font-size: 14px; font-weight: bolder ">3</p>
                     <p class="second-color" style="font-size: 14px;">Comment</p>
                 </div>
+                {{-- COMMENT --}}
                 <div class="card col-sm-12 d-flex flex-column">
-                    <p class="first-color mr-2"
-                        style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulan Bin Fulan</p>
-                    <p>asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa
-                        asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa
-                    </p>
-                </div>
-                <div class="card col-sm-12 d-flex flex-column">
-                    <p class="first-color mr-2"
-                        style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulan Bin Fulan</p>
-                    <p>asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa
-                    </p>
-                </div>
-                <div class="card col-sm-12 d-flex flex-column">
-                    <p class="first-color mr-2"
-                        style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulanah</p>
+                    <div class="d-flex align-items-center">
+                        <p class="first-color mr-2" style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulanah</p>
+                        <button class="btn btn-danger btn-sm" onclick="deleteCard(this)">Delete</button>
+                    </div>
                     <p>asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa asdasdasffaasdasd asdasdasffaasdasd
+                        asdasdasffaasdasd asdasdasffaasdasd asdasdasffaasdasd asdasdasffaasdasd
                     </p>
                 </div>
+                <div class="card col-sm-12 d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        <p class="first-color mr-2" style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulan Bin Fulan</p>
+                        <button class="btn btn-danger btn-sm" onclick="deleteCard(this)">Delete</button>
+                    </div>
+                    <p>asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa asdasdasffaasdasd</p>
+                </div>
+                <div class="card col-sm-12 d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        <p class="first-color mr-2" style="font-size: 12px; font-weight: bolder; margin-top: 2%">Fulanah</p>
+                        <button class="btn btn-danger btn-sm" onclick="deleteCard(this)">Delete</button>
+                    </div>
+                    <p>asdasdasffaasdasdasffaasdasdasffaasdasdasffaasdasdasffa asdasdasffaasdasd asdasdasffaasdasd</p>
+                </div>
+
             </div>
         </div>
     </div>
 </body>
+<script>
+    function deleteCard(element) {
+        // Mendapatkan elemen card yang berisi tombol "Delete"
+        var card = element.closest('.card');
+
+        // Menghapus elemen card dari DOM
+        card.remove();
+    }
+</script>
+
 @include('dashboard_site/footer')
