@@ -59,8 +59,6 @@
     function deleteCard(element) {
         // Mendapatkan elemen card yang berisi tombol "Delete"
         var card = element.closest('.card');
-
-        // Menghapus elemen card dari DOM
         card.remove();
     }
 </script>

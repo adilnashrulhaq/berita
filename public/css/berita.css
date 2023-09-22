@@ -133,9 +133,13 @@
 }
 .second-color {
     font-family:Poppins;
-    color:rgba(94.56250101327896, 94.56250101327896, 94.56250101327896, 0.6000000238418579);
+    color:rgba(95, 95, 95, 0.6);
 }
 
+.drdw:hover {
+    background-color: #3F2305;
+    color: #F5F5F5;
+}
 @media (max-width: 768px) {
     .empty-img {
         width: 350px !important;

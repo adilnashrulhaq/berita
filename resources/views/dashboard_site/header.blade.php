@@ -38,17 +38,28 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item" style="margin-left: 40px;margin-right: 120px">
+                            {{-- <li class="nav-item" style="margin-left: 40px;margin-right: 120px">
                                 <a class="nav-link {{ Request::path() === 'article' ? 'active' : '' }}" href="{{ route('article') }}">
                                     <span class="title">Article</span>
                                 </a>
+                            </li> --}}
+                            <li class="nav-item dropdown" style="margin-right: 130px">
+                                <a class="nav-link {{ Request::path() === 'article' ||
+                                                    Request::path() === 'article/category' ||
+                                                    Request::path() === 'article/create' ||
+                                                    Request::path() === 'article/edit' ? 'active' : '' }}"
+                                    data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Article</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item drdw" href="{{ route('article') }}">Article</a></li>
+                                    <li><a class="dropdown-item drdw" href="{{ route('category') }}">Category</a></li>
+                                </ul>
                             </li>
-                            <li class="nav-item" style="margin-right: 120px">
-                                <a class="nav-link {{ Request::path() === 'comment' ? 'active' : '' }}" href="{{ route('comment') }}">
+                            <li class="nav-item" style="margin-right: 130px">
+                                <a class="nav-link {{ Request::path() === 'comment' || Request::path() === 'comment/detail' ? 'active' : '' }}" href="{{ route('comment') }}">
                                     <span class="title">Comment</span>
                                 </a>
                             </li>
-                            <li class="nav-item" style="margin-right: 120px">
+                            <li class="nav-item" style="margin-right: 40px">
                                 <a class="nav-link {{ Request::path() === 'author' ? 'active' : '' }}" href="{{ route('author') }}">
                                     <span class="title">Author</span>
                                 </a>

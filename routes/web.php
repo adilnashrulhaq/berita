@@ -30,6 +30,9 @@ Route::get('/article/edit', function () {
 Route::get('/article/empty', function () {
     return view('dashboard_site/article/empty');
 })->name('article-empty');
+Route::get('/article/category', function () {
+    return view('dashboard_site/article/category');
+})->name('category');
 
 
 //Author
